@@ -1,28 +1,69 @@
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+@import url("https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,400;0,500;1,300;1,600;1,700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-html{
-    font-size: 16px;
+:root {
+  --color-1: #eb233c;
 }
-body{
-    min-height: 100vh;
+
+html {
+  font-size: 16px;
+  font-family: "Chakra Petch", sans-serif;
 }
-.header{
-    width: 100%;
-    padding: 10x 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+
+body {
+  min-height: 100vh;
 }
+
+.header {
+  width: 100%;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.container_navegation {
+  width: 50%;
+  min-width: 400px;
+}
+
+.menu ul {
+  list-style: none; /* Aca quitamos las viñetas de la lista*/
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.item_menu_link, .button_cv_resumen {
+  text-decoration: none;
+  color: black;
+  text-transform: capitalize; /*esta propiedad convierte las primeras letra en mayusculas*/
+  font-weight: 600;
+}
+
+.item_menu_link::before {
+    content: "01.";
+    margin-right: 5px;
+    color: var(--color-1)
+}
+
+.button_cv_resumen {
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
 
 /* css logo */
-.container_logo{
-    width: 50px;
+
+.container_logo {
+  width: 50px;
 }
 
-.container_logo image{
-    width: 100%;
+.container_logo img {
+  width: 100%;
 }
