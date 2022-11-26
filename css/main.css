@@ -1,0 +1,15 @@
+/* CSS Main */
+#main{
+    width: 100%;
+    max-width: 1600px;
+    padding: 0px 300px;
+    margin: 0 auto;
+}
+
+#presentation{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
