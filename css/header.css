@@ -1,68 +1,95 @@
-*{
+@import url("https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,400;0,500;1,300;1,600;1,700&display=swap");
+
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
 :root {
-  --color-1: #eb233c;
+    --color-1: #eb233c ;
+    --color-2: #eb233a65;
 }
 
 html {
-  font-size: 16px;
-  font-family: "Chakra Petch", sans-serif;
+    font-size: 16px;
+    font-family: "Chakra Petch", sans-serif;
 }
 
 body {
-  min-height: 100vh;
+    min-height: 100vh;
+    counter-reset: item;
 }
 
 .header {
-  width: 100%;
-  padding: 10px 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+    width: 100%;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .container_navegation {
-  width: 50%;
-  min-width: 400px;
+    width: 50%;
+    min-width: 400px;
 }
 
 .menu ul {
-  list-style: none; /* Aca quitamos las viñetas de la lista*/
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
+    list-style: none;
+    /* Aca quitamos las viñetas de la lista*/
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 
-.item_menu_link, .button_cv_resumen {
-  text-decoration: none;
-  color: black;
-  text-transform: capitalize; /*esta propiedad convierte las primeras letra en mayusculas*/
-  font-weight: 600;
+.menu ul li{
+    counter-increment: item 1; 
+    /* esta propiedad va relacionada con item_menu_link::before =>content: "0" counter(item)"."; */
+}
+
+.item_menu_link,
+.button_cv_resumen {
+    text-decoration: none;
+    color: black;
+    text-transform: capitalize;
+    /*esta propiedad convierte las primeras letra en mayusculas*/
+    font-weight: 500;
 }
 
 .item_menu_link::before {
-    content: "01.";
+    content: "0" counter(item)".";
+    /*esta propiedad en css lo que hace qes iniciar un contador desde 0 pero se le debe dar una propiedad al padre para poder incrementar en cada item */
     margin-right: 5px;
     color: var(--color-1)
 }
 
+.item_menu_link:hover{
+    color: var(--color-1);
+    transition: .4s ease-in;
+}
+
 .button_cv_resumen {
-  padding: 10px;
-  border: 1px solid black;
-  border-radius: 5px;
+    padding: 10px;
+    border: 2px solid var(--color-1);
+    border-radius: 5px;
+    color: var(--color-1);
+    font-size: 1rem; /* 1rem equivale a 16px*/
+    font-weight: 700;
+}
+
+.button_cv_resumen:hover{
+    background-color: var(--color-2);
+    border: 2px solid rgb(172, 53, 29);
+    transition: .3s ease;
 }
 
 
 /* css logo */
 
 .container_logo {
-  width: 50px;
+    width: 50px;
 }
 
 .container_logo img {
-  width: 100%;
+    width: 100%;
 }
