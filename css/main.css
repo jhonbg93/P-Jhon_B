@@ -1,15 +1,161 @@
 /* CSS Main */
-#main{
+:root {
+    --color-1: #eb233c;
+    --color-2: #eb233a65;
+    --border-radius-1: 5px
+}
+
+body {
+    counter-reset: section;
+}
+
+#main {
     width: 100%;
     max-width: 1600px;
     padding: 0px 300px;
     margin: 0 auto;
 }
 
-#presentation{
+#presentation {
     width: 100%;
     min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
+.greeting_profile {
+    color: var(--color-1);
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.name_profile {
+    text-transform: capitalize;
+    font-size: 3.7rem;
+    margin: 10px 0px 20px 0px;
+}
+
+.decription_profile {
+    width: 95%;
+}
+
+/* SECTION ACERCA DE */
+
+#acercaDe {
+    padding: 100px 0px;
+}
+
+container_title_section{
+    padding-top: 10px;
+}
+
+.container_title_section {
+    text-transform: capitalize;
+    font-size: 1.5rem;
+    counter-increment: section 1;
+}
+
+.text_title_section::before {
+    content: "0" counter(section) ". ";
+    color: var(--color-1);
+    margin-right: 5px;
+}
+
+.text_title_section::after {
+    content: "";
+    width: 250px;
+    height: 2px;
+    display: inline-block;
+    background-color: var(--color-1);
+    position: relative;
+    left: 10px;
+    bottom: 6px;
+}
+
+.container_description_section {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+}
+
+.img_effect {
+    width: 250px;
+    height: 250px;
+    /* overflow: hidden; */
+    /*esta propiedad "overflow" hace que oculte todo lo que sobre sale del contenedor*/
+    position: relative;
+}
+
+.img_effect::before{
+    content: "";
+    width: 100%;
+    height: 100%;
+    display: block;
+    background-color: var(--color-2);
+    position: absolute;
+    border-radius: var(--border-radius-1);
+    left: 0px;
+    top: 0px;
+    transition: .2s ease;
+}
+
+.img_effect::after{
+    content: "";
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    z-index: -1;
+    border-radius: var(--border-radius-1);
+    border: 2px solid var(--color-1);
+    transition: .2s ease;
+}
+
+.img_effect:hover::before{
+    background-color: transparent;
+    transition: .2s ease;
+}
+
+.img_effect:hover::after{
+    left: 5px;
+    top: 5px;   
+    background-color: var(--color-2); 
+}
+
+.img_effect img {
+    width: 100%;
+    object-fit: cover;
+    object-position: center center;
+    border-radius: var(--border-radius-1);
+    
+}
+
+.text_section p{
+    margin-bottom: 10px;
+}
+
+.text_section ul{
+    list-style: none;
+    margin: 5px 0px;
+    display: grid;
+    text-transform: uppercase;
+    grid-template-columns: repeat(2, 1fr);
+    /*esta linea de codigo podemos separa nuestras ul en dos columnas*/
+}
+
+.text_section ul li::before{
+ content: ">";
+ color: var(--color-1);
+ margin-left: 3px;
+}
+
+.text_section ul li:hover{
+    color: var(--color-1);
+    font-weight: 700;
+}
+
+/*SECTION EXPERIENCIA*/
+
