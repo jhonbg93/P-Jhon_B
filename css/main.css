@@ -48,7 +48,7 @@ body {
 }
 
 container_title_section {
-    padding-top: 10px;
+    padding-top: 15px;
 }
 
 .container_title_section {
@@ -186,6 +186,7 @@ container_title_section {
 .container_card_proyect {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    margin-bottom: 50px;
 }
 
 .img_effect_proyect {
@@ -225,6 +226,12 @@ container_title_section {
     margin-bottom: 10px;
     padding: 10px;
     border-radius: var(--border-radius-1);
+    /* box-shadow: 0px 10px 15px 0px rgba(0,0,0,0.75); */
+    transition: .3s ease;
+}
+
+.information_card_proyect:hover{
+    box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.75);
 }
 
 .container_languages_programing ul {
@@ -284,6 +291,8 @@ container_title_section {
     left: 0;
     top: 0; 
     border-radius: var(--border-radius-1);
+
+    transition: .3s ease;
 }
 
 .img_card_proyect:hover::before{
