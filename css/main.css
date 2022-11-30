@@ -2,7 +2,8 @@
 :root {
     --color-1: #eb233c;
     --color-2: #eb233a65;
-    --color-3: black;
+    --color-3: rgb(248, 4, 4);
+    --color-4: #c50b0b8e;
     --border-radius-1: 5px
 }
 
@@ -181,6 +182,7 @@ container_title_section {
 
 #trabajos {
     padding: 100px 0;
+    
 }
 
 .container_card_proyect {
@@ -335,36 +337,36 @@ container_title_section {
 
 .container_card_proyect:nth-child(even) .description_card_proyect {
     text-align: left;
-    
+
 }
 
 .container_card_proyect:nth-child(even) .text_proyect_import {
     text-align: left;
-    
+
 }
 
 .container_card_proyect:nth-child(even) .name_card_proyect {
     text-align: left;
-    
+
 }
 
 /*------------section mas proyectos-----------------------*/
 /*---------------------me-----------------------*/
-.container_icons{
+.container_icons {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    
+
 }
 
-.container_icon a img{
+.container_icon a img {
     width: 50px;
     width: 50px;
     margin-right: 10px;
-       
+
 }
 
-.container_subtitle_cards{
+.container_subtitle_cards {
     width: 100%;
     margin: 20px 0;
     font-weight: 700;
@@ -375,19 +377,66 @@ container_title_section {
     align-items: center;
 }
 
-.container_cards{
+.container_cards {
     display: grid;
+    width: 100%;
     grid-template-columns: repeat(3, 1fr);
-    gap: 3px;
+    gap: 20px;
+
+    
+    flex-wrap: wrap;
 }
 
-.proyect_card{
+.proyect_card {
+    height: 250px;
+    width: 270px;
     padding: 10px;
     border: 2px solid var(--color-1);
     border-radius: var(--border-radius-1);
-}
 
-.container_top_icons{
-    display: block;
+    position: relative;
+
+    transition: .3s ease;
    
 }
+
+.proyect_card:hover {
+
+    background-color: var(--color-4);
+    transition: .3s ease;
+    transform: transLateY(-5px);
+}
+
+.proyect_card:hover .card_name {
+    color: var(--color-1);
+}
+
+.container_top_icons {
+    display: block;
+
+}
+
+.card_name {
+    text-transform: capitalize;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.card_programings {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+}
+
+.card_programings ul {
+    display: flex;
+    list-style: none;
+}
+
+.card_programings ul li {
+    margin: 5px;
+    letter-spacing: 0.1em;
+    font-size: .7rem;
+    text-transform: uppercase;
+}
+
