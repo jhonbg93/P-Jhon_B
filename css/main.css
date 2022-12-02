@@ -440,3 +440,51 @@ container_title_section {
     text-transform: uppercase;
 }
 
+/* SECTION CONTACTOS */
+
+#contactos{
+    padding: 150px 0;
+    text-align: center;
+}
+
+#contactos .text_title_section::after{
+    display: none;
+}
+
+#contactos .container_description_section{
+    grid-template-columns: 1fr;
+    width: 50%;
+    margin: 0 auto;
+}
+
+.gif_animado{
+    width: 250px;
+    height: auto;
+}
+
+/*SECTION FOOTER */
+.footer{
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container_links_footer{
+    padding: 10px 0;
+}
+
+.links_items_footer{
+    list-style: none;
+    display: flex;
+}
+
+.links_items_footer li{
+    margin: 10px;
+}
+
+.links_items_footer img{
+    height: 40px;
+}
