@@ -173,9 +173,15 @@ container_title_section {
     grid-template-columns: 1fr;
 }
 
+#experiencia .text_section ul li p{
+    font-size: 1rem;
+    text-transform: none;
+}
+
 #experiencia .text_section ul li p::before {
     content: ">";
     color: var(--color-1);
+    
 }
 
 /* SECTION TRABAJOS */
@@ -485,6 +491,28 @@ container_title_section {
     margin: 10px;
 }
 
+.links_items_footer li:hover{
+    transform: transLateY(-5px);
+    transition: .3s ease;    
+}
+
 .links_items_footer img{
-    height: 40px;
+    height: 35px;
+    width: 35px;
+    
+}
+
+.text_footer_author{
+    padding: 15px 0;
+    transition: 0.3s ease-in-out ;
+}
+
+.text_footer_author:hover{
+    color: var(--color-1);
+    transition: .3s ease;
+    letter-spacing: .02rem;
+}
+
+footer strong{
+    text-transform: capitalize;
 }
