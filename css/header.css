@@ -9,6 +9,8 @@
 :root {
     --color-1: #eb233c ;
     --color-2: #eb233a65;
+    --text-color-1: white;
+    --text-color-2: #dbdfe9;
 }
 
 html {
@@ -19,6 +21,9 @@ html {
 body {
     min-height: 100vh;
     counter-reset: item;
+    counter-reset: section;
+
+    background-color: #1c1a32;
 }
 
 .header {
@@ -48,6 +53,10 @@ body {
 .menu ul li{
     counter-increment: item 1; 
     /* esta propiedad va relacionada con item_menu_link::before =>content: "0" counter(item)"."; */
+}
+
+.menu ul li a{
+    color: var(--text-color-1);
 }
 
 .item_menu_link,
@@ -96,3 +105,4 @@ body {
 .container_logo img {
     width: 100%;
 }
+

@@ -4,11 +4,9 @@
     --color-2: #eb233a65;
     --color-3: rgb(248, 4, 4);
     --color-4: #c50b0b8e;
-    --border-radius-1: 5px
-}
-
-body {
-    counter-reset: section;
+    --border-radius-1: 5px;
+    --text-color-1: white;
+    --text-color-2: #dbdfe9;
 }
 
 #main {
@@ -36,20 +34,30 @@ body {
     text-transform: capitalize;
     font-size: 3.7rem;
     margin: 10px 0px 20px 0px;
+
+    color: var(--text-color-1);
 }
 
 .decription_profile {
     width: 95%;
+    font-size: 1.1rem;
+    color: var(--text-color-2);
+}
+
+.container_section{
+    font-size: 1.1rem;
 }
 
 /* SECTION ACERCA DE */
 
 #acercaDe {
     padding: 100px 0px;
+    font-size: 1.1rem;
 }
 
-container_title_section {
+.container_title_section {
     padding-bottom: 15px;
+    color: var(--text-color-1);
 }
 
 .container_title_section {
@@ -79,6 +87,8 @@ container_title_section {
     display: grid;
     grid-template-columns: 2fr 1fr;
     gap: 20px;
+
+    color: var(--text-color-2);
 }
 
 .img_effect {
@@ -226,6 +236,7 @@ container_title_section {
 
 .name_card_proyect {
     text-align: right;
+    color: var(--text-color-2);
 }
 
 .information_card_proyect {
@@ -247,6 +258,8 @@ container_title_section {
     display: flex;
     justify-content: right;
     flex-wrap: wrap;
+
+    color: var(--text-color-2);
 }
 
 .container_languages_programing ul li {
@@ -265,7 +278,7 @@ container_title_section {
 .container_links_proyects ul li {
     letter-spacing: 0.1em;
     font-size: 0.8rem;
-    margin: 0px 5px;
+    margin: 5px;
 }
 
 .container_links_proyects ul li:hover a {
@@ -275,6 +288,7 @@ container_title_section {
 .container_links_proyects ul li a {
     color: var(--color-3);
     text-decoration: none;
+    color: var(--text-color-2);
 }
 
 .container_links_proyects ul li img {
@@ -381,6 +395,8 @@ container_title_section {
     display: flex;
     justify-content: center;
     align-items: center;
+
+    color: var(--text-color-1);
 }
 
 .container_cards {
@@ -404,6 +420,7 @@ container_title_section {
 
     transition: .3s ease;
    
+    color: var(--text-color-1);
 }
 
 .proyect_card:hover {
@@ -505,6 +522,8 @@ container_title_section {
 .text_footer_author{
     padding: 15px 0;
     transition: 0.3s ease-in-out ;
+
+    color: var(--text-color-1);
 }
 
 .text_footer_author:hover{
@@ -515,4 +534,79 @@ container_title_section {
 
 footer strong{
     text-transform: capitalize;
+}
+
+/* CSS DE LOS LATERALES */
+
+.container_lateral{
+    padding: 0 30px;
+    position: fixed;
+    bottom: 0;
+}
+
+.container_lateral a{
+    color: black;
+    text-decoration: none;
+    transition: .3s ease-in-out;
+
+    color: var(--text-color-1);
+}
+
+.container_lateral a:hover{
+    color: var(--color-1);
+    transition: .3s ease;
+}
+
+.container_lateral ul{
+    list-style: none;
+}
+
+.container_lateral ul li{
+    margin: 10px 0px;
+    transition: .3s ease-in-out;
+}
+
+.container_lateral ul li:hover{
+    transform: translatex(5px);
+    transition: .3s ease;
+}
+
+.container_lateral img{
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    
+}
+
+.container_lateral::after{
+    content: "";
+    width: 2px;
+    height: 100px;
+    display: block;
+    background-color: var(--color-1);
+    margin: 0 auto;
+}
+
+.sade_izq{
+    left: 0;
+}
+
+.side_der{
+    right: 0;
+}
+
+.email_author{
+    transition: .3s ease-in-out;
+    font-size: 1.1rem;
+}
+
+.side_der .email_author:hover{
+    transform: translatex(-5px);
+    transition: .3s ease;
+}
+
+.side_der a{
+    margin-bottom: 15px;
+    writing-mode: vertical-rl;
+    letter-spacing: .1rem;
 }
