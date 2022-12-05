@@ -32,10 +32,13 @@
 
 .name_profile {
     text-transform: capitalize;
-    font-size: 3.7rem;
     margin: 10px 0px 20px 0px;
 
     color: var(--text-color-1);
+}
+
+.name_profile h1{
+    font-size: clamp(40px, 8vw, 88px);
 }
 
 .decription_profile {
@@ -247,6 +250,8 @@
     border-radius: var(--border-radius-1);
     /* box-shadow: 0px 10px 15px 0px rgba(0,0,0,0.75); */
     transition: .3s ease;
+
+    font-size: .95rem;
 }
 
 .information_card_proyect:hover {
@@ -410,7 +415,7 @@
 }
 
 .proyect_card {
-    height: 250px;
+    height: 280px;
     width: 270px;
     padding: 10px;
     border: 2px solid var(--color-1);
@@ -463,6 +468,10 @@
     text-transform: uppercase;
 }
 
+.card_details{
+    font-size: 1rem;
+}
+
 /* SECTION CONTACTOS */
 
 #contactos{
@@ -476,13 +485,14 @@
 
 #contactos .container_description_section{
     grid-template-columns: 1fr;
-    width: 50%;
+    width: 80%;
     margin: 0 auto;
 }
 
 .gif_animado{
     width: 250px;
     height: auto;
+    margin: 0 auto;
 }
 
 /*SECTION FOOTER */
@@ -497,6 +507,7 @@
 
 .container_links_footer{
     padding: 10px 0;
+    display: none;
 }
 
 .links_items_footer{

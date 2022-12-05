@@ -1,0 +1,119 @@
+@media screen and (max-width: 1200px) {
+    #main {
+        padding: 0px 150px;
+    }
+
+    .card_details {
+        font-size: .9rem;
+    }
+
+
+}
+
+@media screen and (max-width: 992px) {
+    #main {
+        padding: 0px 100px;
+    }
+
+    .container_cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media screen and (max-width: 800px) {
+    .text_title_section::after {
+        width: 100%;
+        bottom: 0;
+        left: 0;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    #main {
+        padding: 0px 50px;
+    }
+
+    .container_lateral {
+        display: none;
+    }
+
+    .container_links_footer {
+        padding: 10px 0;
+        display: block;
+    }
+
+    /* CSS-HEADER */
+    
+    .container_navegation{
+        position: absolute;
+        width: 50%;
+        min-width: 200px;
+        right: 0;
+        top: 0;
+        background-color: red;
+    }
+
+    .menu ul{
+        height: 100vh;
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .container_description_section {
+        grid-template-columns: 1fr;
+    }
+
+    .container_img_section{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .container_card_proyect {
+        grid-template-columns: 1fr;
+    }
+
+    .img_effect_proyect {
+        width: 100%;
+
+    }
+
+    .container_card_proyect:nth-child(odd) .img_card_proyect {
+        left: 0px
+    }
+
+    .container_card_proyect:nth-child(even) .img_card_proyect {
+        order: 0;
+        left: 0px;
+    }
+
+    .container_card_proyect:nth-child(odd) .description_card_proyect {
+        left: 0px;
+    }
+
+    .container_card_proyect:nth-child(even) .description_card_proyect {
+        left: 0px;
+    }
+
+    .description_card_project {
+        margin-top: 10px;
+    }
+}
+
+@media screen and (max-width: 560px){
+    .container_cards {
+        grid-template-columns: 1fr;
+        width: 550px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        padding-right: 80px;
+    }
+
+    
+}
