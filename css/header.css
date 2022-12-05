@@ -35,6 +35,7 @@ body {
     position: fixed;
     top: 0;
     left: 0;
+    z-index: 1;
 }
 
 .container_navegation {
@@ -100,9 +101,11 @@ body {
 
 .container_logo {
     width: 50px;
+    z-index: 1;
 }
 
 .container_logo img {
     width: 100%;
+    
 }
 

@@ -1,3 +1,10 @@
+:root {
+    --color-1: #eb233c ;
+    --color-2: #eb233a65;
+    --text-color-1: white;
+    --text-color-2: #dbdfe9;
+}
+
 @media screen and (max-width: 1200px) {
     #main {
         padding: 0px 150px;
@@ -48,16 +55,32 @@
     
     .container_navegation{
         position: absolute;
-        width: 50%;
+        width: 100%;
         min-width: 200px;
         right: 0;
         top: 0;
-        background-color: red;
+        backdrop-filter: blur(10px); /*la propiedad backdrop-filter: blur() nos da un efecto de opacidad tambien podemos consultar la propiedad filter: blur() */
     }
 
     .menu ul{
+        width: 50%;
         height: 100vh;
         flex-direction: column;
+        justify-content: center;
+        margin-left: auto;
+
+        background-color: var(--color-2);
+    }
+
+    .menu ul li{
+        margin: 25px 0;
+    }
+
+    .item_menu_link::before{
+        display: block;
+        text-align: center;
+        margin-right: 0;
+        margin-bottom: 3px;
     }
 }
 
