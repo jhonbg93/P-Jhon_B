@@ -52,6 +52,11 @@
     }
 
     /* CSS-HEADER */
+
+    .container_button_menu_responsive{
+        display: block;
+        z-index: 1;
+    }
     
     .container_navegation{
         position: absolute;
@@ -60,6 +65,12 @@
         right: 0;
         top: 0;
         backdrop-filter: blur(10px); /*la propiedad backdrop-filter: blur() nos da un efecto de opacidad tambien podemos consultar la propiedad filter: blur() */
+        transform: translateX(100%);
+        transition: .3s ease;
+    }
+
+    .active_button_menu{
+        transform: translateX(0%);
     }
 
     .menu ul{
