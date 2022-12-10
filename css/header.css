@@ -24,6 +24,7 @@ body {
     counter-reset: section;
 
     background-color: #1c1a32;
+    overflow-x: hidden;
 }
 /* Modificando el scroll */
 body::-webkit-scrollbar{
@@ -130,3 +131,12 @@ body::-webkit-scrollbar-thumb{
     display: none;
 }
 
+.active_header{
+    transform: translateY(0%);
+    transition: .3s linear;
+}
+
+.desactive_header{
+    transform: translateY(-110%);
+    transition: .3s linear;
+}
