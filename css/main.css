@@ -24,6 +24,8 @@
     align-items: center;
 }
 
+
+
 .greeting_profile {
     color: var(--color-1);
     font-size: 1.2rem;
@@ -37,14 +39,20 @@
     color: var(--text-color-1);
 }
 
+
 .name_profile h1{
     font-size: clamp(40px, 8vw, 88px);
 }
 
 .decription_profile {
-    width: 95%;
+    width: 100%;
     font-size: 1.1rem;
     color: var(--text-color-2);
+}
+
+.decription_profile p{
+    width: 100%;
+    width: max-content;
 }
 
 .container_section{
